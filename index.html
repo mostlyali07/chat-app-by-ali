@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <h1>Register user</h1>
+            <label>
+                Full name
+                <br />
+                <input type="text" name="" id="name" />
+            </label>
+            <br />
+            <label>
+                Email
+                <br />
+                <input type="email" name="" id="email" />
+            </label>
+            <br />
+            <label>
+                Password
+                <br />
+                <input type="password" name="" id="password" />
+            </label>
+            <br />
+            <button id="register-btn">Register</button>
+        </div>
+        <div>
+            <h1>Login</h1>
+            <label>
+                Email
+                <br />
+                <input type="email" name="" id="l-email" />
+            </label>
+            <br />
+            <label>
+                Password
+                <br />
+                <input type="password" name="" id="l-password" />
+            </label>
+            <br />
+            <button id="login-btn">Login</button>
+        </div>
+    </div>
+
+    <hr />
+    Current user: <span id="current-user"></span>
+    <hr />
+    <div class="app-main">
+        <div class="users-box">
+            <h2>Users</h2>
+            <ul id="users"></ul>
+        </div>
+        <div class="chat-box">
+            <div>
+                <h4>Chat with <span id="chat-with"></span></h4>
+            </div>
+            <div class="messages">
+                <ul id="all-messages"></ul>
+            </div>
+            <div>
+                <input id="message" type="text" placeholder="type message here" />
+                <button id="send">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+</body>
+
+</html>
