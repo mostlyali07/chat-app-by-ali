@@ -22,35 +22,52 @@
         <div class="container text-center mt-5">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 style="font-size: 30px;">Chat App by "ALI"</h2>
+                    <h2 style="font-size: 30px;">Chat App</h2>
                 </div>
                 <div class="col-md-3"></div>
                 <div class="col-md-2"></div>
                 <div class="col-md-4">
                     <i class="fa-solid fa-earth-europe"></i>
-                    <button class="sign-in">Sign In</button>
-                    <button class="r-demo">Request Demo</button>
+                    <button class="sign-in" onclick="regist()">Sign In</button>
+                    <button class="r-demo" onclick="signIn()">Register</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-4 text-center div_one mt-5 p-5">
-                    <h1>Register user</h1>
-                    <p>Hey, Enter Your Details To Get Sign In To Your Account</p>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="name" placeholder="Name">
-                        <label for="floatingInput">Enter Full Name</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                        <label for="floatingInput">Email address</label>
-                      </div>
-                      <div class="form-floating">
-                        <input type="password" class="form-control" id="password" placeholder="Password">
-                        <label for="floatingPassword">Password</label>
+                    <div id="regist">
+                        <form action="/chats.html"></form>
+                        <h1>Register user</h1>
+                        <p>Hey, Enter Your Details To Register Your Account</p>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                            <label for="floatingInput">Enter Full Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <br />
+                        <button id="register-btn" class="btn mt-3">Register</button>
                     </div>
-                    <br />
-                    <button id="register-btn" class="btn mt-3">Register</button>
+                    <div id="logIn" style="display: none;">
+                        <h1>Login Your User</h1>
+                        <p>Hello, Enter Your Details To Get Sign In To Your Account</p>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <br />
+                        <button id="register-btn" class="btn mt-3">Sign In</button>
+                    </div>
                     <!-- <label>
                         Full name
                         <br />
@@ -128,6 +145,14 @@
         function chatsOpen() {
             document.getElementById("chat-2").style.display = 'block';
             document.getElementById("chat-1").style.display = 'none';
+        }
+        function regist(){
+            document.getElementById("regist").style.display = 'none';
+            document.getElementById("logIn").style.display = 'block';
+        }
+        function signIn(){
+            document.getElementById("regist").style.display = 'block';
+            document.getElementById("logIn").style.display = 'none';
         }
     </script>
     <script src="app.js" type="module">
