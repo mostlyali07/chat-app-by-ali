@@ -1,32 +1,68 @@
-.main,
-.app-main {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.body {
+    background-color: #f5f2ea;
 }
 
-.users-box {
-  border: 2px solid grey;
-  padding: 50px;
+body button {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(0, 0, 0);
 }
 
-.chat-box {
-  border: 2px solid grey;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
+h1, h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
-.messages {
-  flex: 1;
+label {
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgb(0, 0, 0);
+
+}
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.fa-earth-europe{
+    font-size: 26px;
+    color: black !important;
+}
+.div_one {
+    /* background-image: url(/back.jpg); */
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.45);
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.45);
+    border-radius: 6px;
+    background-color: #fff;
 }
 
-.my-message {
-  color: green;
-  font-weight: bold;
+.div_two {
+    background-image: url(/back.jpg);
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.45);
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.45);
+    border-radius: 6px;
 }
 
-.user-message {
-  color: red;
-  font-weight: bold;
+.btn {
+    background-color: #fdc886 !important;
+    color: white !important;
+    color: #0e0e0e !important;
+}
+.r-demo{
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #fdc886;
+    color: #0e0e0e;
+    border: 0px none;
+    border-radius: 9px;
+    padding: 10px 18px;
+}
+.sign-in{
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #0000;
+    color: #0e0e0e;
+    border: 0px none;
+    border-radius: 9px;
+    padding: 10px 18px;
 }

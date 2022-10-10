@@ -1,4 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -17,18 +18,17 @@ import {
     getDocs,
     addDoc,
     onSnapshot,
-    orderBy,
+    Timestamp,
 } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCbH8tj9s8JBB-arrqMN8pIH8bAYllY0AA",
-    authDomain: "saylani-batch-8.firebaseapp.com",
-    databaseURL:
-        "https://saylani-batch-8-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "saylani-batch-8",
-    storageBucket: "saylani-batch-8.appspot.com",
-    messagingSenderId: "248523962565",
-    appId: "1:248523962565:web:c7b814c871780785e558ac",
+    apiKey: "AIzaSyCtWW-LOGsDFrs6kDX4eVS7jzgBrzhd_pU",
+    authDomain: "chat-app-7477.firebaseapp.com",
+    projectId: "chat-app-7477",
+    storageBucket: "chat-app-7477.appspot.com",
+    messagingSenderId: "294682483206",
+    appId: "1:294682483206:web:3a78ec1d3761a8f4074187",
+    measurementId: "G-JQ53LHQW7X"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -114,17 +114,13 @@ const getAllUsers = async (email, currentId, currentName) => {
     const querySnapshot = await getDocs(q);
     let users = document.getElementById("users");
     querySnapshot.forEach((doc) => {
-        users.innerHTML += `<li>${doc.data().name} 
-        <button onclick='startChat("${doc.id}","${doc.data().name}","${currentId}","${currentName}")' id="chat-btn">Start Chat</button></li>`;
+        users.innerHTML += `<li>${doc.data().name} <button onclick='startChat("${doc.id
+            }","${doc.data().name
+            }","${currentId}","${currentName}")' id="chat-btn">Start Chat</button></li>`;
     });
 };
 
-let unsubscribe;
-
 let startChat = (id, name, currentId, currentName) => {
-    if (unsubscribe) {
-        unsubscribe();
-    }
     let chatWith = document.getElementById("chat-with");
     chatWith.innerHTML = name;
     let send = document.getElementById("send");
@@ -135,7 +131,7 @@ let startChat = (id, name, currentId, currentName) => {
     } else {
         chatID = `${currentId}${id}`;
     }
-    loadAllChats(chatID, currentId);
+    loadAllChats(chatID);
     send.addEventListener("click", async () => {
         let allMessages = document.getElementById("all-messages");
         allMessages.innerHTML = "";
@@ -151,26 +147,16 @@ let startChat = (id, name, currentId, currentName) => {
     });
 };
 
-const loadAllChats = (chatID, currentId) => {
-    try {
-        const q = query(
-            collection(db, "messages"),
-            where("chat_id", "==", chatID),
-            orderBy("timestamp", "asc")
-        );
-        let allMessages = document.getElementById("all-messages");
-        unsubscribe = onSnapshot(q, (querySnapshot) => {
-            allMessages.innerHTML = "";
-            querySnapshot.forEach((doc) => {
-                let className =
-                    doc.data().sender_id === currentId ? "my-message" : "user-message";
-                allMessages.innerHTML += `<li class="${className}">${doc.data().sender_name
-                    }: ${doc.data().message}</li>`;
-            });
+const loadAllChats = (chatID) => {
+    const q = query(collection(db, "messages"), where("chat_id", "==", chatID));
+    let allMessages = document.getElementById("all-messages");
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+        allMessages.innerHTML = "";
+        querySnapshot.forEach((doc) => {
+            allMessages.innerHTML += `<li>${doc.data().message}</li>`;
         });
-    } catch (err) {
-        console.log(err);
-    }
+    });
 };
 
 window.startChat = startChat;
+
