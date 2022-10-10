@@ -1,0 +1,32 @@
+.main,
+.app-main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.users-box {
+  border: 2px solid grey;
+  padding: 50px;
+}
+
+.chat-box {
+  border: 2px solid grey;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+}
+
+.my-message {
+  color: green;
+  font-weight: bold;
+}
+
+.user-message {
+  color: red;
+  font-weight: bold;
+}
