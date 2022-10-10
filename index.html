@@ -33,10 +33,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4"></div>
+                <div class="col-md-4 left-div"></div>
                 <div class="col-md-4 text-center div_one mt-5 p-5">
-                    <div id="regist">
-                        <form action="/chats.html">
+                    <form action="/chats.html">
+                        <div id="regist">
                             <h1>Register user</h1>
                             <p>Hey, Enter Your Details To Register Your Account</p>
                             <div class="form-floating mb-3">
@@ -52,22 +52,22 @@
                                 <label for="floatingPassword">Password</label>
                             </div>
                             <br />
-                            <button id="register-btn" class="btn mt-3">Register</button>
-                    </div>
-                    <div id="logIn" style="display: none;">
-                        <h1>Login Your User</h1>
-                        <p>Hello, Enter Your Details To Get Sign In To Your Account</p>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
+                            <button id="register-btn" class="btn mt-2">Register</button>
                         </div>
-                        <div class="form-floating">
-                            <input type="password" class="form-control" id="password" placeholder="Password">
-                            <label for="floatingPassword">Password</label>
+                        <div id="logIn" style="display: none;">
+                            <h1>Login Your User</h1>
+                            <p>Hello, Enter Your Details To Get Sign In To Your Account</p>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+                            <br />
+                            <button id="login-btn" class="btn mt-2">Sign In</button>
                         </div>
-                        <br />
-                        <button id="register-btn" class="btn mt-3">Sign In</button>
-                    </div>
                     </form>
                     <!-- <label>
                         Full name
@@ -103,32 +103,7 @@
                     <br />
                     <button id="login-btn" class="btn mt-3">Login</button>
                 </div> -->
-                <div class="col-md-4"></div>
-
-            </div>
-            <button type="button" class="btn px-5 py-2 mt-3" onclick="chatsOpen()">Go To Chats</button>
-        </div>
-    </div>
-    <div class="chats" id="chat-2" style="display: none;">
-        <hr />
-        Current user: <span id="current-user"></span>
-        <hr />
-        <div class="app-main">
-            <div class="users-box">
-                <h2>Users</h2>
-                <ul id="users"></ul>
-            </div>
-            <div class="chat-box">
-                <div>
-                    <h4>Chat with <span id="chat-with"></span></h4>
-                </div>
-                <div class="messages">
-                    <ul id="all-messages"></ul>
-                </div>
-                <div>
-                    <input id="message" type="text" placeholder="type message here" />
-                    <button id="send">Send</button>
-                </div>
+                <div class="col-md-4 right-div"></div>
             </div>
         </div>
     </div>
@@ -143,10 +118,6 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <script>
-        function chatsOpen() {
-            document.getElementById("chat-2").style.display = 'block';
-            document.getElementById("chat-1").style.display = 'none';
-        }
         function regist() {
             document.getElementById("regist").style.display = 'none';
             document.getElementById("logIn").style.display = 'block';

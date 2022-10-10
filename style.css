@@ -66,3 +66,16 @@ p{
     border-radius: 9px;
     padding: 10px 18px;
 }
+
+.left-div{
+    background-image: url(/hand-drawn-left.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.right-div{
+    background-image: url(/hand-drawn-right.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
