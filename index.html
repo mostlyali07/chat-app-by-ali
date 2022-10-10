@@ -36,23 +36,23 @@
                 <div class="col-md-4"></div>
                 <div class="col-md-4 text-center div_one mt-5 p-5">
                     <div id="regist">
-                        <form action="/chats.html"></form>
-                        <h1>Register user</h1>
-                        <p>Hey, Enter Your Details To Register Your Account</p>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="name" placeholder="Name">
-                            <label for="floatingInput">Enter Full Name</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
-                        </div>
-                        <div class="form-floating">
-                            <input type="password" class="form-control" id="password" placeholder="Password">
-                            <label for="floatingPassword">Password</label>
-                        </div>
-                        <br />
-                        <button id="register-btn" class="btn mt-3">Register</button>
+                        <form action="/chats.html">
+                            <h1>Register user</h1>
+                            <p>Hey, Enter Your Details To Register Your Account</p>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Name">
+                                <label for="floatingInput">Enter Full Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+                            <br />
+                            <button id="register-btn" class="btn mt-3">Register</button>
                     </div>
                     <div id="logIn" style="display: none;">
                         <h1>Login Your User</h1>
@@ -68,6 +68,7 @@
                         <br />
                         <button id="register-btn" class="btn mt-3">Sign In</button>
                     </div>
+                    </form>
                     <!-- <label>
                         Full name
                         <br />
@@ -146,11 +147,11 @@
             document.getElementById("chat-2").style.display = 'block';
             document.getElementById("chat-1").style.display = 'none';
         }
-        function regist(){
+        function regist() {
             document.getElementById("regist").style.display = 'none';
             document.getElementById("logIn").style.display = 'block';
         }
-        function signIn(){
+        function signIn() {
             document.getElementById("regist").style.display = 'block';
             document.getElementById("logIn").style.display = 'none';
         }
