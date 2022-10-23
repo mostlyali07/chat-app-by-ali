@@ -54,7 +54,13 @@ const register = () => {
             console.log(errorMessage);
         });
 };
-
+if (name.value.trim() === "") {
+    Swal.fire(
+        'Error',
+        'Please Fill Up Your Form',
+        'error'
+    )
+}
 const btn = document.getElementById("register-btn");
 
 btn.addEventListener("click", register);
