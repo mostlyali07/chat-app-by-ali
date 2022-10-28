@@ -6,6 +6,7 @@ import {
     signInWithEmailAndPassword,
     onAuthStateChanged,
     sendEmailVerification,
+    signOut,
 } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 import {
     doc,
@@ -54,16 +55,16 @@ const register = () => {
             console.log(errorMessage);
         });
 };
-if (name.value.trim() === "") {
-    Swal.fire(
-        'Error',
-        'Please Fill Up Your Form',
-        'error'
-    )
-}
+// if (name.value.trim() === "") {
+//     Swal.fire(
+//         'Error',
+//         'Please Fill Up Your Form',
+//         'error'
+//     )
+// }
 const btn = document.getElementById("register-btn");
 
-btn.addEventListener("click", register);
+btn.addEventListener("click", register);    
 
 const login = () => {
     const email = document.getElementById("l-email");
@@ -166,3 +167,9 @@ const loadAllChats = (chatID) => {
 
 window.startChat = startChat;
 
+const auth = getAuth();
+signOut(auth).then(() => {
+  // Sign-out successful.
+}).catch((error) => {
+  // An error happened.
+});
