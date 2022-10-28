@@ -22,30 +22,35 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                Current user: <span id="current-user"></span>
-            </div>
-            <div class="col-md-4">
-                <div>
-                    <h4>Chat with <span id="chat-with"></span></h4>
+            <div class="col-md-3">
+                <div class="current-user">
+                    Current user: <span id="current-user"></span>
                 </div>
-                <div class="chat-box">
-    
-                    <div class="messages">
-                        <ul id="all-messages"></ul>
-                    </div>
+            </div>
+            <div class="col-md-6">
+                <div class="chats">
                     <div>
-                        <input id="message" type="text" placeholder="type message here" />
-                        <button id="send">Send</button>
+                        <h4>Chat with <span id="chat-with"></span></h4>
+                    </div>
+                    <div class="chat-box">
+
+                        <div class="messages">
+                            <ul id="all-messages"></ul>
+                        </div>
+                        <div>
+                            <input id="message" type="text" placeholder="type message here" />
+                            <button id="send">Send</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="users-box">
-                    <h2>Users</h2>
-                    <ul id="users"></ul>
+            <div class="col-md-3">
+                <div class="users">
+                    <div class="users-box">
+                        <h2>Users</h2>
+                        <ul id="users"></ul>
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
